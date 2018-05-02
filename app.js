@@ -7,11 +7,11 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 
 // Connect To Database
-mongoose.connect(config.database);
+mongoose.connect(process.env.database);
 
 // On Connection
 mongoose.connection.on('connected', () => {
-  console.log('Connected to DB '+config.database);
+  console.log('Connected to DB '+ process.env.database);
 });
 
 // On Error
