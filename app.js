@@ -7,11 +7,11 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 
 // Connect To Database
-mongoose.connect(config.database);
+mongoose.connect('mongodb://Otto:Bismarck@ds151153.mlab.com:51153/mean-f2b');
 
 // On Connection
 mongoose.connection.on('connected', () => {
-  console.log('Connected to DB '+ config.database);
+  console.log('Connected to DB ' + 'mongodb://Otto:Bismarck@ds151153.mlab.com:51153/mean-f2b');
 });
 
 // On Error
